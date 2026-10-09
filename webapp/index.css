@@ -1,0 +1,102 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Body styling */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #4facfe, #00f2fe);
+  color: #333;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* use min-height for better mobile handling */
+  padding: 20px;     /* add padding so content isn't flush on small screens */
+  padding-top: 70px;
+}
+
+/* Header styling */
+.site-header {
+  width: 100%;
+  background: #0077b6;
+  color: #fff;
+  padding: 15px 20px;
+  position: fixed; /* stays at top */
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* center logo */
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+
+/* Container */
+.container {
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+  text-align: center;
+  width: 100%;              /* full width by default */
+  max-width: 400px;         /* cap width on larger screens */
+}
+
+/* Title */
+h1 {
+  font-size: clamp(1.5rem, 4vw, 2rem); /* responsive font size */
+  margin-bottom: 10px;
+  color: #0077b6;
+}
+
+.subtitle {
+  font-size: clamp(0.9rem, 2.5vw, 1rem);
+  margin-bottom: 20px;
+  color: #555;
+}
+
+/* Counter box */
+.counter-box {
+  background: #f1f9ff;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+  border: 2px solid #0077b6;
+}
+
+.counter-box h2 {
+  margin-bottom: 10px;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
+  color: #023e8a;
+}
+
+#visit-count {
+  font-size: clamp(2rem, 6vw, 2.5rem);
+  font-weight: bold;
+  color: #03045e;
+}
+
+/* Footer */
+footer {
+  margin-top: 20px;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  color: #777;
+}
+
+/* Media Queries for extra tweaks */
+@media (max-width: 480px) {
+  .container {
+    padding: 20px;
+  }
+  .counter-box {
+    padding: 15px;
+  }
+}
